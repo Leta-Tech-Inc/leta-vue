@@ -33,7 +33,4 @@ jobs:
                   username: ${{ secrets.USERNAME }}
                   key: ${{ secrets.SSH_KEY }}
                   script: |
-                    docker pull finmipt/leta-vue:latest
-                    docker stop leta-vue || true
-                    docker rm leta-vue || true
-                    docker run -d --name leta-vue -p 8881:80 finmipt/leta-vue:latest
+                    /home/mark/leta-vue/deploy.sh
